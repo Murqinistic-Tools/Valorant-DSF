@@ -78,7 +78,7 @@ python build_desktop.py
 
 ## ⚖️ Legal Disclaimer
 
-This project (ValoStore) is not an official product of Riot Games and is not endorsed by or affiliated with Riot Games or any person involved in the production or management of Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+This project (Valorant-DSF) is not an official product of Riot Games and is not endorsed by or affiliated with Riot Games or any person involved in the production or management of Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
 
 **User Responsibility:**
 This software is intended for educational and personal use only. The developer cannot be held responsible for any account restrictions (bans), data loss, or other issues that may arise from the use of this software. The user accepts that they use this software at their own risk.
