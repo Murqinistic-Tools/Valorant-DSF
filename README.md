@@ -8,7 +8,7 @@
 ![PyWebview](https://img.shields.io/badge/PyWebview-Desktop-orange?style=flat-square)
 ![Geist UI](https://img.shields.io/badge/Design-Geist%20UI-black?style=flat-square&logo=vercel)
 
-Valorant DSF (Desktop & Store Frontend) is a hybrid application that allows players to check their daily store. Whether as a desktop widget or on your mobile device via local network (LAN).
+Valorant DSF (Desktop & Web App) is a hybrid application that allows players to check their daily store. Whether as a desktop widget or on your mobile device via local network (LAN).
 
 ---
 
