@@ -3,7 +3,7 @@
 
 > **Secure, Modern, and Hybrid (Desktop + Web) Valorant Store Controller.**
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square&logo=python)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.95%2B-009688?style=flat-square&logo=fastapi)
 ![PyWebview](https://img.shields.io/badge/PyWebview-Desktop-orange?style=flat-square)
 ![Geist UI](https://img.shields.io/badge/Design-Geist%20UI-black?style=flat-square&logo=vercel)
