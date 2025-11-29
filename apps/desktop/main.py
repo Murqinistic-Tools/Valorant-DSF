@@ -23,8 +23,24 @@ main_window = None
 
 # --- FastAPI App ---
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+
+# Get absolute path to the directory containing this file
+# Note: In PyInstaller, we might need sys._MEIPASS, but for now let's fix the dev environment
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Check if we are running in a bundle
+if getattr(sys, 'frozen', False):
+    base_dir = sys._MEIPASS
+
+# The desktop app seems to expect static files in the same directory as main.py
+# based on the original code `directory="static"`.
+# However, looking at the file structure, we need to be sure where `static` is.
+# Assuming it's in apps/desktop/static or similar.
+static_dir = os.path.join(base_dir, "static")
+templates_dir = os.path.join(base_dir, "templates")
+
+app.mount("/static", StaticFiles(directory=static_dir), name="static")
+templates = Jinja2Templates(directory=templates_dir)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
@@ -122,6 +138,9 @@ if __name__ == "__main__":
     # Create API Bridge
     api = Api()
 
+    # Resolve Icon Path
+    icon_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'assets', 'icon.ico'))
+
     # Create Main Window
     main_window = webview.create_window(
         'Valorant DSF', 
@@ -133,4 +152,4 @@ if __name__ == "__main__":
         js_api=api
     )
 
-    webview.start(debug=False)
+    webview.start(debug=False, icon=icon_path)
